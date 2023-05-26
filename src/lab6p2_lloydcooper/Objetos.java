@@ -13,7 +13,6 @@ public class Objetos {
         this.personaIngreso = personaIngreso;
     }
 
-    // Getters y setters para los atributos
     public String getColor() {
         return color;
     }

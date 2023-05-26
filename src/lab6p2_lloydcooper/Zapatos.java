@@ -13,7 +13,6 @@ public class Zapatos extends Objetos {
         this.comodidad = comodidad;
     }
 
-    // Getters y setters para los atributos adicionales
     public int getTalla() {
         return talla;
     }

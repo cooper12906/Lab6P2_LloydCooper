@@ -1,20 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package lab6p2_lloydcooper;
 
-/**
- *
- * @author CUSTOMER PC
- */
 public class frameMain extends javax.swing.JFrame {
 
-    /**
-     * Creates new form frameMain
-     */
     public frameMain() {
         initComponents();
+        
     }
 
     /**
@@ -27,20 +17,44 @@ public class frameMain extends javax.swing.JFrame {
     private void initComponents() {
 
         pnFondo = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pnFondo.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel9.setText("Menu principal");
+
+        jButton1.setText("Crear user");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnFondoLayout = new javax.swing.GroupLayout(pnFondo);
         pnFondo.setLayout(pnFondoLayout);
         pnFondoLayout.setHorizontalGroup(
             pnFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnFondoLayout.createSequentialGroup()
+                .addContainerGap(235, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addGap(234, 234, 234))
+            .addGroup(pnFondoLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnFondoLayout.setVerticalGroup(
             pnFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(pnFondoLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel9)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(308, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -57,6 +71,16 @@ public class frameMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        abrirCrearUser();
+    }//GEN-LAST:event_jButton1MouseClicked
+    
+    private void abrirCrearUser(){
+        crearPersonal.pack();
+        crearPersonal.setLocationRelativeTo(this);
+        crearPersonal.setModal(true);
+        crearPersonal.setVisible(true);
+    }
     /**
      * @param args the command line arguments
      */
@@ -93,6 +117,8 @@ public class frameMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel pnFondo;
     // End of variables declaration//GEN-END:variables
 }

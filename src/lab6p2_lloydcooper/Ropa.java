@@ -13,7 +13,6 @@ public class Ropa extends Objetos {
         this.paísElaboración = paísElaboración;
     }
 
-    // Getters y setters para los atributos adicionales
     public int getTalla() {
         return talla;
     }

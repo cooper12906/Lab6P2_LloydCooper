@@ -13,7 +13,6 @@ public class ObjetosHogar extends Objetos {
         this.tiempoGarantía = tiempoGarantía;
     }
 
-    // Getters y setters para los atributos adicionales
     public String getLugarCasa() {
         return lugarCasa;
     }
