@@ -39,9 +39,9 @@ public class Gerente extends Persona {
     @Override
     public String toString() {
         return "Gerente:" + 
-                "\nUser" + user + 
-                "\nPassword" + password + 
-                "\nCargo:" + cargo;
+                "\nUser:\n" + user + 
+                "\nPassword:\n" + password + 
+                "\nCargo:\n" + cargo;
     }
     
     

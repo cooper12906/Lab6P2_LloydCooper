@@ -502,7 +502,7 @@ public class frameMain extends javax.swing.JFrame {
             } //fin for  
             p.reload();
             crearPersonal.setVisible(false);
-            
+            JOptionPane.showMessageDialog(crearPersonal,"Creado correctamente!");
         }
     }//GEN-LAST:event_btnCrearMouseClicked
 
@@ -521,13 +521,13 @@ public class frameMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void btnCrearGerenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearGerenteMouseClicked
-        JOptionPane.showMessageDialog(JdGerente,"Creado con exito!");
+        JOptionPane.showMessageDialog(JdGerente,"Gerente creado con exito!");
         JdGerente.setVisible(false);
         
     }//GEN-LAST:event_btnCrearGerenteMouseClicked
 
     private void btnCrearPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearPersonalMouseClicked
-        
+        JOptionPane.showMessageDialog(JdGerente,"Personal creado con exito!");
         JdPersonal.setVisible(false);
     }//GEN-LAST:event_btnCrearPersonalMouseClicked
     
