@@ -263,18 +263,26 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="tfUser" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfPassword" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfCargo" alignment="0" pref="100" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="tfUser" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tfPassword" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tfCargo" alignment="0" pref="100" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+                              <Component id="btnCrearGerente" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace pref="130" max="32767" attributes="0"/>
                   </Group>
@@ -298,7 +306,9 @@
                           <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="tfCargo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="91" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnCrearGerente" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="50" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -324,6 +334,14 @@
             <Component class="javax.swing.JTextField" name="tfPassword">
             </Component>
             <Component class="javax.swing.JTextField" name="tfCargo">
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCrearGerente">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear gerente"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnCrearGerenteMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -354,20 +372,28 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="tfOcupacion" pref="100" max="32767" attributes="0"/>
-                          <Component id="tfHorarioTrabajo" max="32767" attributes="0"/>
-                          <Component id="tfTiempoLaborando" max="32767" attributes="0"/>
-                          <Component id="tfSueldo" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="tfOcupacion" pref="100" max="32767" attributes="0"/>
+                                  <Component id="tfHorarioTrabajo" max="32767" attributes="0"/>
+                                  <Component id="tfTiempoLaborando" max="32767" attributes="0"/>
+                                  <Component id="tfSueldo" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="btnCrearPersonal" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace pref="84" max="32767" attributes="0"/>
                   </Group>
@@ -396,7 +422,9 @@
                           <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="tfSueldo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="65" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnCrearPersonal" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="24" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -429,6 +457,14 @@
             <Component class="javax.swing.JTextField" name="tfTiempoLaborando">
             </Component>
             <Component class="javax.swing.JTextField" name="tfSueldo">
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCrearPersonal">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear personal"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnCrearPersonalMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -539,7 +575,7 @@
         <Component class="javax.swing.JTree" name="JtPersonal">
           <Properties>
             <Property name="model" type="javax.swing.tree.TreeModel" editor="org.netbeans.modules.form.editors2.TreeModelEditor">
-              <TreeModel code="Personal&#xa; Gerente&#xa;  blue&#xa;  violet&#xa;  red&#xa;  yellow&#xa; Personal&#xa;  basketball&#xa;  soccer&#xa;  football&#xa;  hockey"/>
+              <TreeModel code="Personal&#xa; Gerente &#xa;  User&#xa;  Password&#xa;  Cargo &#xa; Personal&#xa;  "/>
             </Property>
           </Properties>
         </Component>
@@ -552,7 +588,7 @@
         <Component class="javax.swing.JTree" name="JtObjetos">
           <Properties>
             <Property name="model" type="javax.swing.tree.TreeModel" editor="org.netbeans.modules.form.editors2.TreeModelEditor">
-              <TreeModel code="Objeto&#xa; Zapatos&#xa;  blue&#xa;  violet&#xa;  red&#xa;  yellow&#xa; Ropa&#xa;  basketball&#xa;  soccer&#xa;  football&#xa;  hockey&#xa; Objetos de hogar&#xa;  hot dogs&#xa;  pizza&#xa;  ravioli&#xa;  bananas"/>
+              <TreeModel code="Objeto&#xa; Zapatos&#xa; Ropa&#xa; Objetos de hogar&#xa; "/>
             </Property>
           </Properties>
         </Component>

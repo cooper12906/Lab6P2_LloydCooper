@@ -35,6 +35,14 @@ public class Gerente extends Persona {
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
+
+    @Override
+    public String toString() {
+        return "Gerente:" + 
+                "\nUser" + user + 
+                "\nPassword" + password + 
+                "\nCargo:" + cargo;
+    }
     
     
 }

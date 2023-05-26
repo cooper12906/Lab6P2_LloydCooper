@@ -47,6 +47,7 @@ public class frameMain extends javax.swing.JFrame {
         tfUser = new javax.swing.JTextField();
         tfPassword = new javax.swing.JTextField();
         tfCargo = new javax.swing.JTextField();
+        btnCrearGerente = new javax.swing.JButton();
         JdPersonal = new javax.swing.JDialog();
         jPanel3 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
@@ -57,6 +58,7 @@ public class frameMain extends javax.swing.JFrame {
         tfHorarioTrabajo = new javax.swing.JTextField();
         tfTiempoLaborando = new javax.swing.JTextField();
         tfSueldo = new javax.swing.JTextField();
+        btnCrearPersonal = new javax.swing.JButton();
         jDialog3 = new javax.swing.JDialog();
         jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -221,21 +223,33 @@ public class frameMain extends javax.swing.JFrame {
 
         jLabel12.setText("Cargo");
 
+        btnCrearGerente.setText("Crear gerente");
+        btnCrearGerente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCrearGerenteMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12))
-                .addGap(59, 59, 59)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tfUser)
-                    .addComponent(tfPassword)
-                    .addComponent(tfCargo, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12))
+                        .addGap(59, 59, 59)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tfUser)
+                            .addComponent(tfPassword)
+                            .addComponent(tfCargo, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(btnCrearGerente)))
                 .addContainerGap(130, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -253,7 +267,9 @@ public class frameMain extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(tfCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnCrearGerente)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout JdGerenteLayout = new javax.swing.GroupLayout(JdGerente.getContentPane());
@@ -277,23 +293,35 @@ public class frameMain extends javax.swing.JFrame {
 
         jLabel16.setText("Sueldo");
 
+        btnCrearPersonal.setText("Crear personal");
+        btnCrearPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCrearPersonalMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(71, 71, 71)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel16))
-                .addGap(48, 48, 48)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tfOcupacion, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addComponent(tfHorarioTrabajo)
-                    .addComponent(tfTiempoLaborando)
-                    .addComponent(tfSueldo))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))
+                        .addGap(48, 48, 48)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tfOcupacion, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(tfHorarioTrabajo)
+                            .addComponent(tfTiempoLaborando)
+                            .addComponent(tfSueldo)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(btnCrearPersonal)))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -315,7 +343,9 @@ public class frameMain extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(tfSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnCrearPersonal)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout JdPersonalLayout = new javax.swing.GroupLayout(JdPersonal.getContentPane());
@@ -354,58 +384,24 @@ public class frameMain extends javax.swing.JFrame {
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Personal");
         javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Gerente");
-        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("blue");
+        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("User");
         treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("violet");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Password");
         treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("red");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("yellow");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Cargo");
         treeNode2.add(treeNode3);
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Personal");
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("basketball");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("soccer");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("football");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("hockey");
-        treeNode2.add(treeNode3);
         treeNode1.add(treeNode2);
         JtPersonal.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(JtPersonal);
 
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Objeto");
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Zapatos");
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("blue");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("violet");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("red");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("yellow");
-        treeNode2.add(treeNode3);
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Ropa");
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("basketball");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("soccer");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("football");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("hockey");
-        treeNode2.add(treeNode3);
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Objetos de hogar");
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("hot dogs");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("pizza");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("ravioli");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("bananas");
-        treeNode2.add(treeNode3);
         treeNode1.add(treeNode2);
         JtObjetos.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane2.setViewportView(JtObjetos);
@@ -481,20 +477,38 @@ public class frameMain extends javax.swing.JFrame {
             
             DefaultTreeModel g = (DefaultTreeModel) JtPersonal.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) g.getRoot();
+            for (int i = 0; i < raiz.getChildCount(); i++) {
+                if (raiz.getChildAt(i).toString().
+                        equals("Personal")) {
+                        DefaultMutableTreeNode nodo = new DefaultMutableTreeNode(new Gerente(user, password, cargo, user, nombre, edad, sexo, EstadoCivil, altura, peso));
+                        ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(nodo);
+                    
+                } //fin if
+            } //fin for
             DefaultMutableTreeNode nodo = new DefaultMutableTreeNode(new Gerente(user, password, cargo, user, nombre, edad, sexo, EstadoCivil, altura, peso));
             ((DefaultMutableTreeNode) raiz.getChildAt(0)).add(nodo);
             g.reload();
+            
         } else if (flagPersonal = true) {
             String ocupacion = tfOcupacion.getText();
             String horarioTrabajo = tfHorarioTrabajo.getText();
             int tiempoLaborando = Integer.parseInt(tfTiempoLaborando.getText());
             int sueldo = Integer.parseInt(tfSueldo.getText());
             
-            DefaultTreeModel g = (DefaultTreeModel) JtPersonal.getModel();
-            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) g.getRoot();
-            DefaultMutableTreeNode nodo = new DefaultMutableTreeNode(new Personal(ocupacion, horarioTrabajo, tiempoLaborando, peso, nombre, nombre, edad, sexo, EstadoCivil, altura, peso));
-            ((DefaultMutableTreeNode) raiz.getChildAt(0)).add(nodo);
-            g.reload();
+            DefaultTreeModel p = (DefaultTreeModel) JtPersonal.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) p.getRoot();
+            
+            for (int i = 0; i < raiz.getChildCount(); i++) {
+                if (raiz.getChildAt(i).toString().
+                        equals("Personal")) {
+                    DefaultMutableTreeNode nodo = new DefaultMutableTreeNode(new Personal(ocupacion, horarioTrabajo, tiempoLaborando, peso, nombre, nombre, edad, sexo, EstadoCivil, altura, peso));
+                    ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(nodo);
+                    
+                } //fin if
+            } //fin for  
+            p.reload();
+            
+            
         }
     }//GEN-LAST:event_btnCrearMouseClicked
 
@@ -511,6 +525,17 @@ public class frameMain extends javax.swing.JFrame {
         flagPersonal = true;
         abrirPersonal();
     }//GEN-LAST:event_jButton5MouseClicked
+
+    private void btnCrearGerenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearGerenteMouseClicked
+        
+        JdGerente.setVisible(false);
+        
+    }//GEN-LAST:event_btnCrearGerenteMouseClicked
+
+    private void btnCrearPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearPersonalMouseClicked
+        
+        JdPersonal.setVisible(false);
+    }//GEN-LAST:event_btnCrearPersonalMouseClicked
     
     private void abrirCrearUser(){
         crearPersonal.pack();
@@ -576,6 +601,8 @@ public class frameMain extends javax.swing.JFrame {
     private javax.swing.JTree JtObjetos;
     private javax.swing.JTree JtPersonal;
     private javax.swing.JButton btnCrear;
+    private javax.swing.JButton btnCrearGerente;
+    private javax.swing.JButton btnCrearPersonal;
     private javax.swing.JDialog crearPersonal;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;

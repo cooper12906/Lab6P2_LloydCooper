@@ -80,14 +80,14 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + 
-                "ID=" + ID + 
-                ", nombre=" + nombre + 
-                ", edad=" + edad + 
-                ", sexo=" + sexo + 
-                ", estadoCivil=" + estadoCivil + 
-                ", altura=" + altura + 
-                "peso=" + peso;
+        return "Persona:" + 
+                "\nID:" + ID + 
+                "\nNombre:" + nombre + 
+                "\nEdad:" + edad + 
+                "\nSexo" + sexo + 
+                "\nEstado civil:" + estadoCivil + 
+                "\nAltura:" + altura + 
+                "\nPeso:" + peso;
     }
     
     
