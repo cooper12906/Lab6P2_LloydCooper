@@ -60,7 +60,9 @@ public class frameMain extends javax.swing.JFrame {
         tfTiempoLaborando = new javax.swing.JTextField();
         tfSueldo = new javax.swing.JTextField();
         btnCrearPersonal = new javax.swing.JButton();
-        jDialog3 = new javax.swing.JDialog();
+        crearObjeto = new javax.swing.JDialog();
+        JdZapatos = new javax.swing.JDialog();
+        JdRopa = new javax.swing.JDialog();
         jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -360,14 +362,36 @@ public class frameMain extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
-        jDialog3.getContentPane().setLayout(jDialog3Layout);
-        jDialog3Layout.setHorizontalGroup(
-            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout crearObjetoLayout = new javax.swing.GroupLayout(crearObjeto.getContentPane());
+        crearObjeto.getContentPane().setLayout(crearObjetoLayout);
+        crearObjetoLayout.setHorizontalGroup(
+            crearObjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 400, Short.MAX_VALUE)
         );
-        jDialog3Layout.setVerticalGroup(
-            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        crearObjetoLayout.setVerticalGroup(
+            crearObjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout JdZapatosLayout = new javax.swing.GroupLayout(JdZapatos.getContentPane());
+        JdZapatos.getContentPane().setLayout(JdZapatosLayout);
+        JdZapatosLayout.setHorizontalGroup(
+            JdZapatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        JdZapatosLayout.setVerticalGroup(
+            JdZapatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout JdRopaLayout = new javax.swing.GroupLayout(JdRopa.getContentPane());
+        JdRopa.getContentPane().setLayout(JdRopaLayout);
+        JdRopaLayout.setHorizontalGroup(
+            JdRopaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        JdRopaLayout.setVerticalGroup(
+            JdRopaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
@@ -592,17 +616,19 @@ public class frameMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog JdGerente;
     private javax.swing.JDialog JdPersonal;
+    private javax.swing.JDialog JdRopa;
+    private javax.swing.JDialog JdZapatos;
     private javax.swing.JTree JtObjetos;
     private javax.swing.JTree JtPersonal;
     private javax.swing.JButton btnCrear;
     private javax.swing.JButton btnCrearGerente;
     private javax.swing.JButton btnCrearPersonal;
+    private javax.swing.JDialog crearObjeto;
     private javax.swing.JDialog crearPersonal;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JDialog jDialog3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
