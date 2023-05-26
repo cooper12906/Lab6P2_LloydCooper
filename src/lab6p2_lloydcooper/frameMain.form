@@ -575,7 +575,7 @@
         <Component class="javax.swing.JTree" name="JtPersonal">
           <Properties>
             <Property name="model" type="javax.swing.tree.TreeModel" editor="org.netbeans.modules.form.editors2.TreeModelEditor">
-              <TreeModel code="Personal&#xa; Gerente &#xa;  User&#xa;  Password&#xa;  Cargo &#xa; Personal&#xa;  "/>
+              <TreeModel code="Personal&#xa; Gerente &#xa; Personal&#xa;  "/>
             </Property>
           </Properties>
         </Component>

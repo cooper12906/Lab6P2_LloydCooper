@@ -1,5 +1,6 @@
 package lab6p2_lloydcooper;
 
+import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
@@ -384,12 +385,6 @@ public class frameMain extends javax.swing.JFrame {
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Personal");
         javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Gerente");
-        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("User");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Password");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Cargo");
-        treeNode2.add(treeNode3);
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Personal");
         treeNode1.add(treeNode2);
@@ -475,18 +470,17 @@ public class frameMain extends javax.swing.JFrame {
             String password = tfPassword.getText();
             String cargo = tfCargo.getText();
             
+            
+            
             DefaultTreeModel g = (DefaultTreeModel) JtPersonal.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) g.getRoot();
             for (int i = 0; i < raiz.getChildCount(); i++) {
                 if (raiz.getChildAt(i).toString().
-                        equals("Personal")) {
+                        equals("Gerente")) {
                         DefaultMutableTreeNode nodo = new DefaultMutableTreeNode(new Gerente(user, password, cargo, user, nombre, edad, sexo, EstadoCivil, altura, peso));
-                        ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(nodo);
-                    
+                        ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(nodo);            
                 } //fin if
             } //fin for
-            DefaultMutableTreeNode nodo = new DefaultMutableTreeNode(new Gerente(user, password, cargo, user, nombre, edad, sexo, EstadoCivil, altura, peso));
-            ((DefaultMutableTreeNode) raiz.getChildAt(0)).add(nodo);
             g.reload();
             
         } else if (flagPersonal = true) {
@@ -507,7 +501,7 @@ public class frameMain extends javax.swing.JFrame {
                 } //fin if
             } //fin for  
             p.reload();
-            
+            crearPersonal.setVisible(false);
             
         }
     }//GEN-LAST:event_btnCrearMouseClicked
@@ -527,7 +521,7 @@ public class frameMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void btnCrearGerenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearGerenteMouseClicked
-        
+        JOptionPane.showMessageDialog(JdGerente,"Creado con exito!");
         JdGerente.setVisible(false);
         
     }//GEN-LAST:event_btnCrearGerenteMouseClicked
