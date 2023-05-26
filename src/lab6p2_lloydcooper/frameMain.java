@@ -48,6 +48,15 @@ public class frameMain extends javax.swing.JFrame {
         tfPassword = new javax.swing.JTextField();
         tfCargo = new javax.swing.JTextField();
         JdPersonal = new javax.swing.JDialog();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        tfOcupacion = new javax.swing.JTextField();
+        tfHorarioTrabajo = new javax.swing.JTextField();
+        tfTiempoLaborando = new javax.swing.JTextField();
+        tfSueldo = new javax.swing.JTextField();
         jDialog3 = new javax.swing.JDialog();
         jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -258,15 +267,66 @@ public class frameMain extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel13.setText("Ocupacion");
+
+        jLabel14.setText("Horario de trabajo");
+
+        jLabel15.setText("Tiempo laborando");
+
+        jLabel16.setText("Sueldo");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel16))
+                .addGap(48, 48, 48)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tfOcupacion, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .addComponent(tfHorarioTrabajo)
+                    .addComponent(tfTiempoLaborando)
+                    .addComponent(tfSueldo))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(tfOcupacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(tfHorarioTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(tfTiempoLaborando, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(tfSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout JdPersonalLayout = new javax.swing.GroupLayout(JdPersonal.getContentPane());
         JdPersonal.getContentPane().setLayout(JdPersonalLayout);
         JdPersonalLayout.setHorizontalGroup(
             JdPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         JdPersonalLayout.setVerticalGroup(
             JdPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
@@ -424,8 +484,17 @@ public class frameMain extends javax.swing.JFrame {
             DefaultMutableTreeNode nodo = new DefaultMutableTreeNode(new Gerente(user, password, cargo, user, nombre, edad, sexo, EstadoCivil, altura, peso));
             ((DefaultMutableTreeNode) raiz.getChildAt(0)).add(nodo);
             g.reload();
-        } else if () {
+        } else if (flagPersonal = true) {
+            String ocupacion = tfOcupacion.getText();
+            String horarioTrabajo = tfHorarioTrabajo.getText();
+            int tiempoLaborando = Integer.parseInt(tfTiempoLaborando.getText());
+            int sueldo = Integer.parseInt(tfSueldo.getText());
             
+            DefaultTreeModel g = (DefaultTreeModel) JtPersonal.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) g.getRoot();
+            DefaultMutableTreeNode nodo = new DefaultMutableTreeNode(new Personal(ocupacion, horarioTrabajo, tiempoLaborando, peso, nombre, nombre, edad, sexo, EstadoCivil, altura, peso));
+            ((DefaultMutableTreeNode) raiz.getChildAt(0)).add(nodo);
+            g.reload();
         }
     }//GEN-LAST:event_btnCrearMouseClicked
 
@@ -439,7 +508,8 @@ public class frameMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        // TODO add your handling code here:
+        flagPersonal = true;
+        abrirPersonal();
     }//GEN-LAST:event_jButton5MouseClicked
     
     private void abrirCrearUser(){
@@ -454,6 +524,13 @@ public class frameMain extends javax.swing.JFrame {
         JdGerente.setLocationRelativeTo(this);
         JdGerente.setModal(true);
         JdGerente.setVisible(true);
+    }
+    
+    private void abrirPersonal(){
+        JdPersonal.pack();
+        JdPersonal.setLocationRelativeTo(this);
+        JdPersonal.setModal(true);
+        JdPersonal.setVisible(true);
     }
     private void abrirCrearObjeto(){
         
@@ -509,6 +586,10 @@ public class frameMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -519,18 +600,24 @@ public class frameMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField tfAltura;
     private javax.swing.JTextField tfCargo;
     private javax.swing.JTextField tfEdad;
     private javax.swing.JTextField tfEstadoCivil;
+    private javax.swing.JTextField tfHorarioTrabajo;
     private javax.swing.JTextField tfID;
     private javax.swing.JTextField tfNombre;
+    private javax.swing.JTextField tfOcupacion;
     private javax.swing.JTextField tfPassword;
     private javax.swing.JTextField tfPeso;
     private javax.swing.JTextField tfSexo;
+    private javax.swing.JTextField tfSueldo;
+    private javax.swing.JTextField tfTiempoLaborando;
     private javax.swing.JTextField tfUser;
     // End of variables declaration//GEN-END:variables
     boolean flagGerente = false;
+    boolean flagPersonal = false;
 }
